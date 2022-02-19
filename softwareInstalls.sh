@@ -39,8 +39,46 @@ gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 EOF
 
 sudo dnf update -y;
-sudo dnf install code;
+sudo dnf install code -y;
 
-# Confirm installation
+# Confirm VSCode installation
 echo "VSCode details: ";
 rpm -qi code;
+
+# Install pip
+
+sudo dnf clean all;
+sudo dnf install python-pip -y;
+
+# Terminator install
+
+sudo dnf install terminator -y;
+
+# Fish and other terminal extensions installs
+
+sudo dnf install fish -y;
+pip install powerline-shell;
+sudo dnf install neofetch -y;
+
+# Fish config
+
+sudo chsh -s /bin/fish;
+cat << EOF >> ~/.config/fish/fish.config
+function fish_prompt
+    powerline-shell --shell bare $status
+end
+
+neofetch
+EOF
+
+# Anaconda install
+
+# Anaconda config
+
+# Theme setup
+
+sudo dnf install gnome-tweaks -y;
+
+## move resources to new directories
+mkdir .themes;
+mv /setupScripts/theme_files/Nodic-darker-v40 ./.themes;
