@@ -82,4 +82,4 @@ sudo dnf install gnome-tweaks -y;
 
 ## move resources to new directories
 mkdir .themes;
-mv /setupScripts/theme_files/Nodic-darker-v40 ./.themes;
+mv /linuxScripts/theme_files/Nodic-darker-v40 ./.themes;
