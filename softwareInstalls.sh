@@ -76,10 +76,15 @@ EOF
 
 # Anaconda config
 
+# PGAdmin
+
+sudo rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm;
+sudo dnf install pgadmin4-desktop -y;
+
 # Theme setup
 
 sudo dnf install gnome-tweaks -y;
 
 ## move resources to new directories
 mkdir .themes;
-mv /linuxScripts/theme_files/Nodic-darker-v40 ./.themes;
+mv linuxScripts/theme_files/Nodic-darker-v40 ./.themes;
