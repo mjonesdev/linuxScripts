@@ -27,5 +27,5 @@ systemctl start postgresql.service
 
 ## create user and database
 
-sudo su - postgres;
-psql -c "CREATE USER matt WITH CREATEDB; CREATE DATABASE matt;"
+psql -c "CREATE USER matt WITH CREATEDB;";
+psql -c "CREATE DATABASE matt;";
