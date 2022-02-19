@@ -59,6 +59,7 @@ sudo dnf install terminator -y;
 sudo dnf install fish -y;
 pip install powerline-shell;
 sudo dnf install neofetch -y;
+sudo dnf install util-linux-user -y;
 
 # Fish config
 
