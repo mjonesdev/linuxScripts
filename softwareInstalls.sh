@@ -57,18 +57,6 @@ sudo dnf install fish -y;
 pip install powerline-shell;
 sudo dnf install neofetch -y;
 sudo dnf install util-linux-user -y;
-gnome-terminal -x sh -c 'fish';
-sleep 5;
-
-# Fish config
-chsh -s /bin/fish;
-cat << EOF >> ~/.config/fish/fish.config
-function fish_prompt
-    powerline-shell --shell bare $status
-end
-
-neofetch
-EOF
 
 # Docker install
 sudo dnf -y install dnf-plugins-core;
@@ -92,6 +80,6 @@ sudo dnf install gnome-tweaks -y;
 
 ## move resources to new directories
 mkdir .themes;
-mv linuxScripts/theme_files/Nodic-darker-v40 ./.themes;
+mv linuxScripts/theme_files/Nordic-darker-v40 ./.themes;
 
 # shutdown -r +0;
