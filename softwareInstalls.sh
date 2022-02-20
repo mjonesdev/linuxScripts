@@ -81,9 +81,9 @@ sudo dnf install gnome-tweaks -y;
 ## move resources to new directories
 mkdir .themes;
 mkdir .icons;
-mv linuxScripts/theme_files/Nordic-darker-v40 ./.themes;
-mv linuxScripts/theme_files/Zafiro-Icons-Dark-Blue-f ./.icons;
-mv linuxScripts/theme_files/941435.png ./.themes;
+mv linuxSetupScripts/theme_files/Nordic-darker-v40 ./.themes;
+mv linuxSetupScripts/theme_files/Zafiro-Icons-Dark-Blue-f ./.icons;
+mv linuxSetupScripts/theme_files/941435.png ./.themes;
 
 # Create standard development directory structure
 mkdir code;
