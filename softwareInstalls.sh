@@ -74,6 +74,11 @@ sudo systemctl start docker;
 sudo rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm;
 sudo dnf install pgadmin4-desktop -y;
 
+# Chrome install
+sudo dnf install fedora-workstation-repositories;
+sudo dnf config-manager --set-enabled google-chrome;
+sudo dnf install google-chrome-stable;
+
 # Gnome-tweaks install
 
 sudo dnf install gnome-tweaks -y;
@@ -88,6 +93,7 @@ mv linuxSetupScripts/theme_files/941435.png ./.themes;
 # Create standard development directory structure
 mkdir code;
 mkdir scripts;
+sudo chown matt ./scripts ./code ./.themes ./.icons
 
 # Clone scripts repos
-git clone https://github.com/mjonesdev/linuxSetupScripts.git ~/scripts;
+git clone https://github.com/mjonesdev/linuxSetupScripts.git ~/scripts/;
