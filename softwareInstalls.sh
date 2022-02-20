@@ -57,9 +57,10 @@ sudo dnf install fish -y;
 pip install powerline-shell;
 sudo dnf install neofetch -y;
 sudo dnf install util-linux-user -y;
+fish;
 
 # Fish config
-sudo chsh -s /bin/fish;
+chsh -s /bin/fish;
 cat << EOF >> ~/.config/fish/fish.config
 function fish_prompt
     powerline-shell --shell bare $status
