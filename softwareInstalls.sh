@@ -88,8 +88,6 @@ mv linuxScripts/theme_files/941435.png ./.themes;
 # Create standard development directory structure
 mkdir code;
 mkdir scripts;
-mkdir scripts/setupScripts;
-mkdir scripts/workstationUtilities;
 
 # Clone scripts repos
-git clone 
+git clone https://github.com/mjonesdev/linuxSetupScripts.git ~/scripts;
