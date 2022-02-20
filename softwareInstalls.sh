@@ -94,4 +94,4 @@ sudo dnf install gnome-tweaks -y;
 mkdir .themes;
 mv linuxScripts/theme_files/Nodic-darker-v40 ./.themes;
 
-shutdown -r +0;
+# shutdown -r +0;
