@@ -46,23 +46,19 @@ echo "VSCode details: ";
 rpm -qi code;
 
 # Install pip
-
 sudo dnf clean all;
 sudo dnf install python-pip -y;
 
 # Terminator install
-
 sudo dnf install terminator -y;
 
 # Fish and other terminal extensions installs
-
 sudo dnf install fish -y;
 pip install powerline-shell;
 sudo dnf install neofetch -y;
 sudo dnf install util-linux-user -y;
 
 # Fish config
-
 sudo chsh -s /bin/fish;
 cat << EOF >> ~/.config/fish/fish.config
 function fish_prompt
@@ -72,12 +68,19 @@ end
 neofetch
 EOF
 
+# Docker install
+sudo dnf -y install dnf-plugins-core;
+sudo dnf config-manager \
+    --add-repo \
+    https://download.docker.com/linux/fedora/docker-ce.repo;
+sudo dnf install -y docker-ce docker-ce-cli containerd.io;
+sudo systemctl start docker;
+
 # Anaconda install
 
 # Anaconda config
 
 # PGAdmin
-
 sudo rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm;
 sudo dnf install pgadmin4-desktop -y;
 
@@ -88,3 +91,5 @@ sudo dnf install gnome-tweaks -y;
 ## move resources to new directories
 mkdir .themes;
 mv linuxScripts/theme_files/Nodic-darker-v40 ./.themes;
+
+shutdown -r +0;
