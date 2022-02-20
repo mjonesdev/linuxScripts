@@ -57,7 +57,8 @@ sudo dnf install fish -y;
 pip install powerline-shell;
 sudo dnf install neofetch -y;
 sudo dnf install util-linux-user -y;
-fish;
+gnome-terminal -x sh -c 'fish';
+sleep 5;
 
 # Fish config
 chsh -s /bin/fish;
