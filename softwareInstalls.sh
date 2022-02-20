@@ -74,7 +74,7 @@ sudo systemctl start docker;
 sudo rpm -i https://ftp.postgresql.org/pub/pgadmin/pgadmin4/yum/pgadmin4-fedora-repo-2-1.noarch.rpm;
 sudo dnf install pgadmin4-desktop -y;
 
-# Theme setup
+# Gnome-tweaks install
 
 sudo dnf install gnome-tweaks -y;
 
@@ -85,4 +85,11 @@ mv linuxScripts/theme_files/Nordic-darker-v40 ./.themes;
 mv linuxScripts/theme_files/Zafiro-Icons-Dark-Blue-f ./.icons;
 mv linuxScripts/theme_files/941435.png ./.themes;
 
-# shutdown -r +0;
+# Create standard development directory structure
+mkdir code;
+mkdir scripts;
+mkdir scripts/setupScripts;
+mkdir scripts/workstationUtilities;
+
+# Clone scripts repos
+git clone 
