@@ -83,6 +83,7 @@ mkdir .themes;
 mv linuxScripts/theme_files/Nordic-darker-v40 ./.themes;
 
 # Configure theme
+## You can use "dconf watch /" to find the commands required to programmatically add other options
 gsettings set /org/gnome/shell/enabled-extensions ['background-logo@fedorahosted.org', 'user-theme@gnome-shell-extensions.gcampax.github.com'];
 gsettings set /org/gnome/desktop/interface/gtk-theme 'Nordic-darker-v40';
 gsettings set /org/gnome/shell/extensions/user-theme/name 'Nordic-darker-v40';
