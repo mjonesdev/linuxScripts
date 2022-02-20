@@ -82,4 +82,12 @@ sudo dnf install gnome-tweaks -y;
 mkdir .themes;
 mv linuxScripts/theme_files/Nordic-darker-v40 ./.themes;
 
+# Configure theme
+gsettings set /org/gnome/shell/enabled-extensions ['background-logo@fedorahosted.org', 'user-theme@gnome-shell-extensions.gcampax.github.com'];
+gsettings set /org/gnome/desktop/interface/gtk-theme 'Nordic-darker-v40';
+gsettings set /org/gnome/shell/extensions/user-theme/name 'Nordic-darker-v40';
+
+
+
+
 # shutdown -r +0;
